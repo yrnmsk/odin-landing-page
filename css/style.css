@@ -1,67 +1,212 @@
-html, body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+*, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header, footer { background: #1f2937; }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
-body,
-header,
-header :first-child,
-header :last-child,
-main,
-main :first-child,
-main :nth-child(2),
-main :last-child,
-footer
-{ display: flex; }
+header {
+  background: #1f2937;
+  display: flex;
+  flex-direction: column;
+}
 
-body,
-header,
-main,
-main :first-child,
-main :nth-child(2),
-main :nth-child(2) :first-child,
-main :last-child :first-child :first-child
-{ flex-direction: column; }
+header nav {
+  color: #e5e7eb;
+  height: 10vh;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
-header :first-child,
-main :last-child
-{ flex-direction: row; }
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
-header :first-child,
-main :first-child,
-main :nth-child(2),
-main div:last-child,
-footer
-{
+header nav h3 {
+  font-size: 24px;
+  color: #f9faf8;
+}
+
+header section {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 13vw;
+}
+
+header section aside {
+  width: 470px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+header section aside h1 {
+  color: #f9faf8;
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+header section aside p {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+header section aside button {
+  border: 0;
+  border-radius: 8px;
+  background: #3882f6;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 30px;
+}
+
+header section article {
+  background: hsl(0, 0%, 45%);
+  color: white;
+  height: 300px;
+  width: 500px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header { height: 40vh; }
-
-header :first-child {
-  height: 20%;
+main {
+  display: flex;
+  flex-direction: column;
 }
 
-header :first-child ul {
-  display: inline-flex;
-  list-style: none;
+main section#boxes {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
 }
 
-header :last-child { height: 80%; }
+main section#boxes h2 {
+  font-size: 36px;
+  font-weight: bolder;
+  color: #1f2937;
+}
 
-main { height: 100vh; }
+main section#boxes article {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
 
-main :first-child { height: 50%; }
+main section#boxes article aside {
+  height: auto;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column wrap;
+  gap: 5px;
+}
 
-main :nth-child(2) { height: 40%; }
+main section#boxes article aside .box {
+  border-radius: 10px;
+  border: 4px solid #3882f6;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+}
 
-main :last-child { height: 30%; }
+main section#quote {
+  background: #e5e7eb;
+  height: 40vh;
+  padding: 0 29%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-footer { height: 10vh; }
+main section#quote p:first-child {
+  color: #1f2937;
+  font-size: 36px;
+  font-weight: lighter;
+  font-style: italic;
+}
 
-header, footer { color: #fff; }
+main section#quote p:last-child {
+  font-size: 24px;
+  font-style: initial;
+  font-weight: bold;
+  align-self: flex-end;
+  justify-self: right;
+  text-align: right;
+}
+
+main section#signup {
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section#signup div {
+  border-radius: 13px;
+  border: 0;
+  background: #3882f6;
+  color: white;
+  width: 70vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+main section#signup div aside p:first-child {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+main section#signup div aside p:last-child {
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+main section#signup div aside button {
+  border-radius: 10px;
+  border: 2px solid white;
+  background: #3882f6;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 40px;
+}
+
+footer {
+  background: #1f2937;
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
